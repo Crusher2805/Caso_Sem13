@@ -16,9 +16,10 @@ public class Caso_2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // se hace una instancia a la clase
         Hotel app = new Hotel();
         boolean salir = false;
-
+// se hace un bucle para modelar el ingreso y salida de la info
         while (!salir) {
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Ingrese el número de la operación que desea realizar:\n"
