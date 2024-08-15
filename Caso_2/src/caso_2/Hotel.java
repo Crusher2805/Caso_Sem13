@@ -11,14 +11,15 @@ import javax.swing.JOptionPane;
  * @author Aulas Heredia
  */
 public class Hotel {
-
+//iniciar los arreglos con los atributos necesarios
     private String[] habitaciones = {"habitacion", "habitacion2", "habitacion3", "habitacion4", "habitacion5"};
     private int[] pisos = {1, 2, 3, 4, 5};
     private int[] codigo = {101, 202, 303, 404, 505};
     private double[] precio = {50, 60, 40, 30, 20};
     private String[] estado = {"libre", "sucia", "ocupada", "ocupada", "mantenimiento"};
     private String[] tipo = {"simple", "doble", "grande", "premium", "extra_grande"};
-
+    
+// se muestran los arreglos
     public void mostrar() {
         String info = "";
         for (int i = 0; i < habitaciones.length; i++) {
@@ -32,7 +33,7 @@ public class Hotel {
         }
         JOptionPane.showMessageDialog(null, info);
     }
-
+// Se hace un calculo con una condicional sobre el estado de las habitaciones
     public void resumen1() {
         int suma = 0;
         for (int i = 0; i < estado.length; i++) {
@@ -43,6 +44,7 @@ public class Hotel {
         }
         JOptionPane.showMessageDialog(null, "Resumen de habitaciones " + suma);
     }
+// Se hace un calculo con una condicional sobre el estado de las habitaciones, pero esta vez para calcular el valor de las ganancias
 
     public void resumen() {
         double suma = 0;
@@ -54,7 +56,7 @@ public class Hotel {
         }
         JOptionPane.showMessageDialog(null, "La ganancia de las habitaciones ocupadas es de " + suma + "$");
     }
-
+// Se hace un metodo para modificar el arreglo mediante un indice -1 que ayuda para mover espacios sobre las variables a modificar
     public void modificar() {
         String nombreM = JOptionPane.showInputDialog(null, "Ingrese el nombre de la habitacion que desea modificar ");
         int indice = -1;
@@ -64,6 +66,7 @@ public class Hotel {
                 break;
             }
         }
+        // Se hacen los inputs para las modificaciones
         if (indice != -1) {
             String nombreN = JOptionPane.showInputDialog(null, "Ingrese el nuevo nombre de la habitacion ");
             int codigoN = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el nuevo codigo de la habitacion "));
